@@ -1,0 +1,138 @@
+.grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    border: 1px solid #333;
+    background: #1a1a1a;
+    color: #eee;
+    font-family: 'Inter', system-ui, sans-serif;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.grid-header {
+    display: flex;
+    background: #2a2a2a;
+    border-bottom: 2px solid #333;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.header-cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    border-right: 1px solid #444;
+    cursor: pointer;
+    user-select: none;
+    flex-shrink: 0;
+    background: #2a2a2a;
+}
+
+.header-cell:hover {
+    background: #3a3a3a;
+}
+
+.grid-scroll-container {
+    position: relative;
+    overflow: auto;
+    flex-grow: 1;
+}
+
+.grid-sizer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+}
+
+.grid-row-window {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-row {
+    display: flex;
+    border-bottom: 1px solid #333;
+    transition: background 0.1s;
+}
+
+.grid-row:hover {
+    background: #2d2d2d;
+}
+
+.grid-row.selected {
+    background: #1e3a5f !important;
+}
+
+.grid-cell {
+    padding: 8px 12px;
+    border-right: 1px solid #333;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+    transition: background 0.1s;
+    background: inherit;
+}
+
+.pinned-column {
+    position: sticky;
+    z-index: 5;
+    background: #222 !important;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.4);
+}
+
+.header-cell.pinned-column {
+    z-index: 11;
+    background: #2a2a2a !important;
+}
+
+.pin-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    opacity: 0.5;
+    filter: grayscale(1);
+    transition: all 0.2s;
+}
+
+.pin-toggle:hover {
+    opacity: 1;
+    background: #444;
+}
+
+.pin-toggle.active {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.1);
+}
+
+.cell-edit-input {
+    width: 100%;
+    background: #333;
+    color: #fff;
+    border: 1px solid #0078d4;
+    padding: 4px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 1.2rem;
+    color: #aaa;
+}

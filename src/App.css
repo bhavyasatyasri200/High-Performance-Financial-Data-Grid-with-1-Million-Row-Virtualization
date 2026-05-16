@@ -1,0 +1,88 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #121212;
+    color: #fff;
+    padding: 20px;
+}
+
+.app-header {
+    margin-bottom: 20px;
+}
+
+.app-header h1 {
+    margin: 0 0 15px 0;
+    font-size: 1.5rem;
+    color: #646cff;
+}
+
+.filter-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #1e1e1e;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+.filter-input {
+    padding: 8px 12px;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 4px;
+    width: 250px;
+}
+
+.status-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.status-buttons button {
+    padding: 6px 12px;
+    background: #333;
+    border: 1px solid #444;
+    color: #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.status-buttons button:hover {
+    background: #444;
+}
+
+.results-count {
+    margin-left: auto;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.app-main {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.debug-placeholder {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid #ff4757;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.8rem;
+    z-index: 100;
+}
